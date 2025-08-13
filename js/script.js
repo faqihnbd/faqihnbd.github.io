@@ -258,7 +258,7 @@ function initPortfolioModal() {
         client: "Internal Project",
         date: "Mei 2025",
         technologies:
-          "HTML, CSS-Tailwind, JavaScript-React(Frontend), Javascript-Node.JS Express(Backend), Mysql2 Sequalize ORM",
+          "HTML, CSS-Tailwind, JavaScript-React(Frontend), Javascript-Node.JS Express(Backend), Mysql2 Sequalize ORM, Cloud SaaS",
         status: "Sedang Dalam Pengembangan 85% Progress",
       },
       type: "mixed", // video, images, mixed
@@ -364,7 +364,17 @@ function initPortfolioModal() {
       link.addEventListener("click", function (e) {
         e.preventDefault();
 
-        const portfolioId = this.getAttribute("data-portfolio");
+        // Cari data-portfolio dari elemen ini atau parent-nya
+        let portfolioId = this.getAttribute("data-portfolio");
+
+        // Jika tidak ada, cari di parent yang memiliki data-portfolio
+        if (!portfolioId) {
+          const parentWithData = this.closest("[data-portfolio]");
+          if (parentWithData) {
+            portfolioId = parentWithData.getAttribute("data-portfolio");
+          }
+        }
+
         const data = portfolioData[portfolioId];
 
         if (!data) return;
@@ -687,7 +697,7 @@ function initPortfolioVideoPreview() {
     };
 
     const portfolioId = item
-      .querySelector(".portfolio-link")
+      .querySelector(".portfolio-item-link")
       .getAttribute("data-portfolio");
     const videoData = portfolioData[portfolioId];
 
