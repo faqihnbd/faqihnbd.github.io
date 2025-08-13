@@ -445,7 +445,7 @@ img {
   justify-content: center;
   align-items: center;
   aspect-ratio: 3/4; /* ukuran container gambar */
-  max-width: 400px; /* Ukuran maksimum */
+  max-width: 350px; /* Ukuran maksimum */
   margin: 0 auto;
 }
 
@@ -840,6 +840,9 @@ img {
   overflow: hidden;
   box-shadow: var(--box-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-item:hover {
@@ -851,6 +854,7 @@ img {
   aspect-ratio: 16/9;
   overflow: hidden;
   position: relative;
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
 }
 
 .portfolio-img img {
@@ -906,6 +910,7 @@ img {
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 2;
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -949,6 +954,34 @@ img {
 
 .portfolio-link:hover {
   transform: rotate(45deg);
+}
+
+/* Portfolio Caption - Keterangan di bawah gambar */
+.portfolio-caption {
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.portfolio-caption h4 {
+  font-size: 1.1rem;
+  color: var(--dark-color);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-family: var(--body-font);
+}
+
+.portfolio-caption p {
+  font-size: 0.85rem;
+  color: var(--gray-color);
+  margin: 0;
+  font-weight: 400;
+}
+
+.portfolio-item:hover .portfolio-caption {
+  background: var(--light-color);
 }
 
 .portfolio-modal {
