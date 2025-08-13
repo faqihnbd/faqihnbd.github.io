@@ -462,7 +462,7 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 1/1;
   background: linear-gradient(
     45deg,
     var(--primary-color),
@@ -1815,4 +1815,13 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Atur rasio 3:4 khusus untuk Foto Faqih.jpg */
+.foto-faqih-3-4 {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  max-width: 300px; /* Bisa diubah sesuai kebutuhan */
+  object-fit: cover;
+  display: block;
 }
