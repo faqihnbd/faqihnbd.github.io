@@ -1817,11 +1817,11 @@ img {
   }
 }
 
-/* Atur rasio 3:4 khusus untuk Foto Faqih.jpg */
+/* Atur rasio khusus untuk Foto Faqih.jpg */
 .foto-faqih-3-4 {
   aspect-ratio: 3 / 4;
   width: 100%;
-  max-width: 300px; /* Bisa diubah sesuai kebutuhan */
+  max-width: 400px;
   object-fit: cover;
   display: block;
 }
