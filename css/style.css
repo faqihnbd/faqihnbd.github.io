@@ -845,6 +845,14 @@ img {
   flex-direction: column;
 }
 
+.portfolio-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
 .portfolio-item:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-hover);
@@ -927,6 +935,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
 .portfolio-item:hover .portfolio-info {
@@ -944,13 +953,13 @@ img {
 .portfolio-info p {
   font-size: 0.9rem;
   opacity: 0.9;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
   width: 100%;
 }
 
 .portfolio-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -960,10 +969,13 @@ img {
   border-radius: 50%;
   transition: transform 0.3s ease;
   margin: 0 auto;
-  text-decoration: none;
 }
 
 .portfolio-link:hover {
+  transform: rotate(45deg);
+}
+
+.portfolio-item-link:hover .portfolio-link {
   transform: rotate(45deg);
 }
 

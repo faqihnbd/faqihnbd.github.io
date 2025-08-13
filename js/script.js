@@ -239,7 +239,9 @@ function initPortfolioFilter() {
 # PORTFOLIO MODAL
 ==============================================================*/
 function initPortfolioModal() {
-  const portfolioLinks = document.querySelectorAll(".portfolio-link");
+  const portfolioLinks = document.querySelectorAll(
+    ".portfolio-item-link, .portfolio-link"
+  );
   const modal = document.querySelector(".portfolio-modal");
   const modalContent = document.querySelector(".modal-content");
   const modalClose = document.querySelector(".modal-close");
