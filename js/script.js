@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initContactForm();
   initScrollAnimation();
   initThemeToggle();
+  initLanguageToggle();
 });
 
 /*==============================================================
@@ -252,14 +253,19 @@ function initPortfolioModal() {
     portfolio1: {
       title: "Point Of Sales Website",
       category: "Web Development",
-      description:
-        "Aplikasi POS Berbasis CRM dan ERP yang sangat andal membantu reporting dan pengelolaan inventory secara real-time.",
+      description: {
+        id: "Aplikasi POS Berbasis CRM dan ERP yang sangat andal membantu reporting dan pengelolaan inventory secara real-time.",
+        en: "Reliable CRM and ERP-based POS application that helps reporting and real-time inventory management.",
+      },
       details: {
         client: "Internal Project",
         date: "Mei 2025",
         technologies:
           "HTML, CSS-Tailwind, JavaScript-React(Frontend), Javascript-Node.JS Express(Backend), Mysql2 Sequalize ORM, Cloud SaaS",
-        status: "Sedang Dalam Pengembangan 85% Progress",
+        status: {
+          id: "Sedang Dalam Pengembangan 85% Progress",
+          en: "Under Development 85% Progress",
+        },
       },
       type: "mixed", // video, images, mixed
       video: "https://www.youtube.com/embed/lqN44HMgcvM?autoplay=1&mute=1",
@@ -274,14 +280,19 @@ function initPortfolioModal() {
     portfolio2: {
       title: "Corporate Website",
       category: "Web Development",
-      description:
-        "Corporate Website yang Menarik dan User-Friendly serta responsif sesuai permintaan Client. Sehingga dapat memenuhi ekspetasi Client dengan baik.",
+      description: {
+        id: "Corporate Website yang Menarik dan User-Friendly serta responsif sesuai permintaan Client. Sehingga dapat memenuhi ekspetasi Client dengan baik.",
+        en: "Attractive and User-Friendly corporate website that is responsive according to client requests. So it can meet client expectations well.",
+      },
       details: {
         client: "Putra Mandiri Tractor",
         date: "Juni 2025",
         technologies:
           "Javascript, React, Express.js (untuk admin mengelola product)",
-        status: "Selesai",
+        status: {
+          id: "Selesai",
+          en: "Completed",
+        },
       },
       type: "mixed",
       video: "https://www.youtube.com/embed/OQDv8kQJWsg?autoplay=1&mute=1",
@@ -296,13 +307,18 @@ function initPortfolioModal() {
     portfolio3: {
       title: "Automation Testing Selenium",
       category: "Web Testing",
-      description:
-        "Script otomatis untuk testing project Aplikasi POS berbasis web saya.",
+      description: {
+        id: "Script otomatis untuk testing project Aplikasi POS berbasis web saya.",
+        en: "Automated script for testing my web-based POS application project.",
+      },
       details: {
         client: "Internal Project",
         date: "Juli 2025",
         technologies: "Selenium, Chrome WebDriver, Python",
-        status: "Sedang Dalam Pengembangan",
+        status: {
+          id: "Sedang Dalam Pengembangan",
+          en: "Under Development",
+        },
       },
       type: "mixed", // video, images, mixed
       video: "https://www.youtube.com/embed/Nu3Wx2Qe-lA?autoplay=1&mute=1",
@@ -313,11 +329,18 @@ function initPortfolioModal() {
     portfolio4: {
       title: "Automation Testing Cypress",
       category: "Web Testing",
-      description: "Coming Soon",
+      description: {
+        id: "Coming Soon",
+        en: "Coming Soon",
+      },
       details: {
         client: "Internal Project",
         date: "Coming soon",
         technologies: "Javascript - Coming Soon",
+        status: {
+          id: "Akan Datang",
+          en: "Coming Soon",
+        },
       },
       type: "images",
       images: [
@@ -331,14 +354,19 @@ function initPortfolioModal() {
     portfolio5: {
       title: "Digital Signage",
       category: "Web Development",
-      description:
-        "Aplikasi Digital Signage yang interaktif dan responsif untuk menampilkan informasi secara real-time.",
+      description: {
+        id: "Aplikasi Digital Signage yang interaktif dan responsif untuk menampilkan informasi secara real-time.",
+        en: "Interactive and responsive Digital Signage application for displaying real-time information.",
+      },
       details: {
         client: "Internal Project",
         date: "Agustus 2025",
         technologies:
           "React Vite, Tailwind CSS, Javascript, Node.js Express, Mysql2 Sequalize ORM",
-        status: "Sedang Dalam Pengembangan 80% Progress",
+        status: {
+          id: "Sedang Dalam Pengembangan 80% Progress",
+          en: "Under Development 80% Progress",
+        },
       },
       type: "mixed", // video, images, mixed
       video: "https://www.youtube.com/embed/Deht9mN3tIg?autoplay=1&mute=1",
@@ -378,6 +406,21 @@ function initPortfolioModal() {
         const data = portfolioData[portfolioId];
 
         if (!data) return;
+
+        // Get current language
+        const modalCurrentLang = localStorage.getItem("language") || "id";
+
+        // Handle description based on language
+        const description =
+          typeof data.description === "object"
+            ? data.description[modalCurrentLang]
+            : data.description;
+
+        // Handle status based on language
+        const status =
+          typeof data.details.status === "object"
+            ? data.details.status[modalCurrentLang]
+            : data.details.status;
 
         let mediaContent = "";
 
@@ -429,20 +472,23 @@ function initPortfolioModal() {
           </div>
           <div class="modal-body">
             ${mediaContent}
-            <h3>Deskripsi Project</h3>
-            <p>${data.description}</p>
-            <h3>Detail Project</h3>
+            <h3 data-lang-key="portfolio.project.description">Deskripsi Project</h3>
+            <p>${description}</p>
+            <h3 data-lang-key="portfolio.project.details">Detail Project</h3>
             <ul>
-              <li><strong>Client:</strong> ${data.details.client}</li>
-              <li><strong>Tanggal:</strong> ${data.details.date}</li>
-              <li><strong>Teknologi:</strong> ${data.details.technologies}</li>
-              <li><strong>Status:</strong> ${data.details.status}</li>
+              <li><strong data-lang-key="portfolio.project.client">Client:</strong> ${data.details.client}</li>
+              <li><strong data-lang-key="portfolio.project.date">Tanggal:</strong> ${data.details.date}</li>
+              <li><strong data-lang-key="portfolio.project.technologies">Teknologi:</strong> ${data.details.technologies}</li>
+              <li><strong data-lang-key="portfolio.project.status">Status:</strong> ${status}</li>
             </ul>
           </div>
         `;
 
         // Initialize gallery functionality
         initModalGallery();
+
+        // Apply current language to modal content
+        changeLanguage(modalCurrentLang);
 
         // Show modal
         modal.style.display = "block";
@@ -786,4 +832,310 @@ function initPortfolioVideoPreview() {
       });
     }
   });
+}
+
+/*==============================================================
+# LANGUAGE TOGGLE
+==============================================================*/
+const translations = {
+  id: {
+    // Navigation
+    "nav.home": "Beranda",
+    "nav.about": "Tentang Saya",
+    "nav.resume": "Resume",
+    "nav.portfolio": "Portfolio",
+    "nav.services": "Layanan",
+    "nav.contact": "Kontak",
+
+    // Hero Section
+    "hero.greeting": "Halo, Saya",
+    "hero.description":
+      "Saya meraih gelar Sarjana Sistem Komputer dari Universitas Serang Raya. Memiliki pengalaman lebih dari 1 tahun di bidang IT. Saya memiliki pemikiran logis dalam pendekatan praktis untuk memecahkan masalah dalam suatu pekerjaan. Saya akan terus ingin belajar dan berkembang di bidang IT, karena saya senang mengatasi tantangan dan meningkatkan kinerja saya.",
+    "hero.viewPortfolio": "Lihat Portfolio",
+    "hero.contactMe": "Hubungi Saya",
+
+    // About Section
+    "about.subtitle": "Tentang Saya",
+    "about.title": "Mengenal Saya Lebih Dekat",
+    "about.experience": "Tahun Pengalaman",
+    "about.jobTitle": "Saya adalah seorang Junior Quality Assurance",
+    "about.description":
+      "Saya Berminat besar di bidang Software Quality Assurance. Memiliki pemahaman dasar tentang pengujian manual dan otomatis, familiar dengan tools seperti Selenium, Postman, dan Git. Terbiasa mempelajari teknologi baru dengan cepat dan teliti dalam menganalisis bug untuk memastikan kualitas produk.<br /><br /><p><b>Pengalaman Proyek / Portofolio:</b></p>1. Automation Testing Sistem Point Of Sale Modern (Project Pribadi) Menggunakan Selenium + Python untuk membuat script test otomatis pada fitur login, CRUD Kategori, dll. Menjalankan test pada Chrome browser menggunakan WebDriver. Membuat laporan hasil testing dalam format HTML.<br />2. API Testing untuk Aplikasi REST Menggunakan Postman untuk membuat collection API test.",
+    "about.name": "Nama:",
+    "about.email": "Email:",
+    "about.phone": "Telepon:",
+    "about.age": "Usia:",
+    "about.ageValue": "24 Tahun",
+    "about.address": "Alamat:",
+    "about.freelance": "Freelance:",
+    "about.freelanceStatus": "Tersedia",
+
+    // About Project Experience
+    "about.project.experience": "Pengalaman Proyek / Portofolio:",
+    "about.project.description":
+      "1. Automation Testing Sistem Point Of Sale Modern (Project Pribadi) Menggunakan Selenium + Python untuk membuat script test otomatis pada fitur login, CRUD Kategori, dll. Menjalankan test pada Chrome browser menggunakan WebDriver. Membuat laporan hasil testing dalam format HTML.<br />2. API Testing untuk Aplikasi REST Menggunakan Postman untuk membuat collection API test.",
+    "about.downloadCV": "Download CV",
+    "about.contactMe": "Hubungi Saya",
+
+    // Resume Section
+    "resume.subtitle": "Resume",
+    "resume.title": "Curriculum Vitae",
+    "resume.education": "Pendidikan",
+    "resume.experience": "Pengalaman",
+    "resume.skills": "Keahlian",
+
+    // Portfolio Section
+    "portfolio.subtitle": "Portfolio",
+    "portfolio.title": "Karya Terbaik Saya",
+    "portfolio.all": "Semua",
+    "portfolio.web": "Web",
+    "portfolio.app": "App",
+
+    // Experience
+    "exp.job1.date": "Jul 2024 - Sekarang, <br />Jakarta, Indonesia.",
+    "exp.job1.title": "Staff Support & Deployment Software",
+    "exp.job1.company": "PT Murni Solusindo Nusantara",
+    "exp.job1.description":
+      "• Deployment Software: mengimplementasikan perangkat lunak atau sistem ke dalam lingkungan produksi yang melalui beberapa tahap untuk mengembangkan sistem dengan sukses. Implementasi versi aplikasi terbaru dan pengecekan bug error, <br />• Preventive & Corrective Maintenance: Melakukan perawatan preventif berkala untuk memastikan aplikasi berjalan optimal, dan mengambil tindakan korektif cepat atas gangguan atau masalah yang terjadi.<br />• Cross-Team Coordination: Bekerja sama dengan Quality Assurance dan Helpdesk untuk mengidentifikasi dan menyelesaikan masalah teknis secara tepat waktu. <br />• Customer Support: Menangani keluhan pelanggan terkait penggunaan sistem kami, kemudian memberikan penanganan yang tepat dan cepat saat terjadi masalah sistem. <br />• Monitoring dan Reporting: Membuat checklist dan melakukan monitoring berkala terhadap server aplikasi yang sedang berjalan, termasuk memeriksa log server untuk mendeteksi potensi masalah sebelum berdampak pada operasional. <br />• Problem Analysis and Resolution: Menganalisis masalah yang kompleks, mengoordinasikan solusi dengan tim terkait, dan melaporkan masalah kritis kepada atasan untuk ditindaklanjuti. <br />• Product & Client Management: Bertanggung jawab mengelola produk seperti Kisan KD100, Smartqueue, Smartchequebook (Maveric), Smartforex, dan PID Panelo. Menangani klien besar seperti Bank BNI, Bank BRI, Bank BCA, Bank UOB, Bank SBI, ANTARA News, dan klien strategis lainnya, serta memastikan setiap interaksi memenuhi harapan pelanggan. <br />• Scheduled Maintenance: Memastikan jadwal Preventive dan Corrective Maintenance sesuai dengan kesepakatan pelanggan, dan menyediakan solusi teknis yang tepat dan efisien. <br />• Performance Testing: Melakukan stress testing untuk mesin Kisan KD100 dan Antara PID, terutama untuk klien strategis seperti ANTARA News, untuk memastikan kinerja mesin yang optimal bahkan dalam kondisi beban kerja yang tinggi.",
+    "exp.job2.date": "Des 2023 - Mar 2024, <br />Tangerang, Indonesia.",
+    "exp.job2.title": "Led Technician Staff (IT Division)",
+    "exp.job2.company": "PT Adhi Kartika Jaya (JJ PROMOTION)",
+    "exp.job2.description":
+      "• Mengganti dan merawat LED Videotron <br />• Merakit dan merawat komputer, berbagai perangkat keras seperti (VGA, PSU, Mainboard, RAM, dll) <br />• Troubleshooting Komputer dan mengoptimalkan komputer agar tidak lemot <br />• Install aplikasi yang dibutuhkan dan membersihkan komputer dari virus <br />• Mereparasi dan merawat proyektor LCD/DLP serta audio",
+
+    // Services Section
+    "services.subtitle": "Layanan",
+    "services.title": "Apa Yang Saya Tawarkan",
+    "services.webDev.title": "Web Development",
+    "services.webDev.description":
+      "Pembuatan website profesional dengan teknologi terkini, responsif, dan SEO-friendly untuk berbagai jenis bisnis dan kebutuhan.",
+    "services.appDev.title": "App Development",
+    "services.appDev.description": "Coming Soon",
+    "services.testing.title": "Web Automation Testing",
+    "services.testing.description":
+      "Cepat dan teliti dalam menganalisis bug untuk memastikan kualitas produk.",
+    "services.backend.title": "Backend Development",
+    "services.backend.description":
+      "Pengembangan sistem backend yang andal, aman, dan scalable untuk mendukung aplikasi web.",
+    "services.ecommerce.title": "E-commerce Solutions",
+    "services.ecommerce.description":
+      "Pembuatan toko online lengkap dengan sistem pembayaran, manajemen produk, dan integrasi dengan sistem lainnya.",
+    "services.seo.title": "SEO Optimization",
+    "services.seo.description":
+      "Optimasi website untuk mesin pencari untuk meningkatkan peringkat dan visibilitas website.",
+
+    // Contact Section
+    "contact.subtitle": "Kontak",
+    "contact.title": "Hubungi Saya",
+    "contact.location.title": "Lokasi",
+    "contact.location.value": "Tangerang, Indonesia",
+    "contact.email.title": "Email",
+    "contact.phone.title": "Telepon",
+    "contact.followMe": "Ikuti Saya",
+    "contact.form.namePlaceholder": "Nama Anda",
+    "contact.form.emailPlaceholder": "Email Anda",
+    "contact.form.subjectPlaceholder": "Subjek",
+    "contact.form.messagePlaceholder": "Pesan Anda",
+    "contact.form.sendButton": "Kirim Pesan",
+
+    // Portfolio Modal
+    "portfolio.project.description": "Deskripsi Project",
+    "portfolio.project.details": "Detail Project",
+    "portfolio.project.client": "Client",
+    "portfolio.project.date": "Tanggal",
+    "portfolio.project.technologies": "Teknologi",
+    "portfolio.project.status": "Status",
+
+    // Skills Section
+    "skills.soft.title": "Soft Skills",
+    "skills.soft.teamwork": "Team Work",
+    "skills.soft.communication": "Komunikasi",
+    "skills.soft.automation": "Automation Testing",
+
+    // Validation messages
+    "validation.nameRequired": "Nama harus diisi",
+    "validation.emailRequired": "Email harus diisi",
+    "validation.emailInvalid": "Format email tidak valid",
+    "validation.subjectRequired": "Subjek harus diisi",
+    "validation.messageRequired": "Pesan harus diisi",
+    "validation.success": "Pesan berhasil dikirim!",
+    "validation.error": "Terjadi kesalahan. Silakan coba lagi.",
+  },
+  en: {
+    // Navigation
+    "nav.home": "Home",
+    "nav.about": "About Me",
+    "nav.resume": "Resume",
+    "nav.portfolio": "Portfolio",
+    "nav.services": "Services",
+    "nav.contact": "Contact",
+
+    // Hero Section
+    "hero.greeting": "Hello, I'm",
+    "hero.description":
+      "I earned a Bachelor's degree in Computer Systems from Serang Raya University. I have more than 1 year of experience in IT. I have logical thinking with a practical approach to solving problems in a job. I will continue to want to learn and develop in the IT field, because I enjoy overcoming challenges and improving my performance.",
+    "hero.viewPortfolio": "View Portfolio",
+    "hero.contactMe": "Contact Me",
+
+    // About Section
+    "about.subtitle": "About Me",
+    "about.title": "Getting to Know Me Better",
+    "about.experience": "Years Experience",
+    "about.jobTitle": "I am a Junior Quality Assurance",
+    "about.description":
+      "I am very interested in the Software Quality Assurance field. I have a basic understanding of manual and automated testing, familiar with tools such as Selenium, Postman, and Git. I am accustomed to learning new technologies quickly and am thorough in analyzing bugs to ensure product quality.<br /><br /><p><b>Project Experience / Portfolio:</b></p>1. Automation Testing Modern Point Of Sale System (Personal Project) Using Selenium + Python to create automatic test scripts on login features, CRUD Categories, etc. Running tests on Chrome browser using WebDriver. Creating testing result reports in HTML format.<br />2. API Testing for REST Applications Using Postman to create API test collections.",
+    "about.name": "Name:",
+    "about.email": "Email:",
+    "about.phone": "Phone:",
+    "about.age": "Age:",
+    "about.ageValue": "24 Years",
+    "about.address": "Address:",
+    "about.freelance": "Freelance:",
+    "about.freelanceStatus": "Available",
+
+    // About Project Experience
+    "about.project.experience": "Project Experience / Portfolio:",
+    "about.project.description":
+      "1. Modern Point Of Sale System Automation Testing (Personal Project) Using Selenium + Python to create automated test scripts for login features, Category CRUD, etc. Running tests on Chrome browser using WebDriver. Creating testing result reports in HTML format.<br />2. REST Application API Testing Using Postman to create API test collections.",
+    "about.downloadCV": "Download CV",
+    "about.contactMe": "Contact Me",
+
+    // Resume Section
+    "resume.subtitle": "Resume",
+    "resume.title": "Curriculum Vitae",
+    "resume.education": "Education",
+    "resume.experience": "Experience",
+    "resume.skills": "Skills",
+
+    // Portfolio Section
+    "portfolio.subtitle": "Portfolio",
+    "portfolio.title": "My Best Works",
+    "portfolio.all": "All",
+    "portfolio.web": "Web",
+    "portfolio.app": "App",
+
+    // Experience
+    "exp.job1.date": "Jul 2024 - Present, <br />Jakarta, Indonesia.",
+    "exp.job1.title": "Staff Support & Deployment Software",
+    "exp.job1.company": "PT Murni Solusindo Nusantara",
+    "exp.job1.description":
+      "• Software Deployment: implementing software or systems into production environments through several stages to successfully develop systems. Implementation of the latest application versions and checking for bug errors, <br />• Preventive & Corrective Maintenance: Performing regular preventive maintenance to ensure applications run optimally, and taking quick corrective action on disruptions or problems that occur.<br />• Cross-Team Coordination: Collaborating with Quality Assurance and Helpdesk to identify and resolve technical issues in a timely manner. <br />• Customer Support: Handling customer complaints related to the use of our systems, then providing appropriate and quick handling when system problems occur. <br />• Monitoring and Reporting: Creating checklists and conducting regular monitoring of running application servers, including checking server logs to detect potential problems before impacting operations. <br />• Problem Analysis and Resolution: Analyzing complex problems, coordinating solutions with related teams, and reporting critical issues to superiors for follow-up. <br />• Product & Client Management: Responsible for managing products such as Kisan KD100, Smartqueue, Smartchequebook (Maveric), Smartforex, and PID Panelo. Handling large clients such as Bank BNI, Bank BRI, Bank BCA, Bank UOB, Bank SBI, ANTARA News, and other strategic clients, and ensuring every interaction meets customer expectations. <br />• Scheduled Maintenance: Ensuring Preventive and Corrective Maintenance schedules are in accordance with customer agreements, and providing appropriate and efficient technical solutions. <br />• Performance Testing: Conducting stress testing for Kisan KD100 and Antara PID machines, especially for strategic clients such as ANTARA News, to ensure optimal machine performance even under high workload conditions.",
+    "exp.job2.date": "Dec 2023 - Mar 2024, <br />Tangerang, Indonesia.",
+    "exp.job2.title": "Led Technician Staff (IT Division)",
+    "exp.job2.company": "PT Adhi Kartika Jaya (JJ PROMOTION)",
+    "exp.job2.description":
+      "• Replacing and maintaining LED Videotron <br />• Assembling and maintaining computers, various hardware such as (VGA, PSU, Mainboard, RAM, etc.) <br />• Computer troubleshooting and optimizing computers to avoid slowdowns <br />• Installing required applications and cleaning computers from viruses <br />• Repairing and maintaining LCD/DLP projectors and audio equipment",
+
+    // Services Section
+    "services.subtitle": "Services",
+    "services.title": "What I Offer",
+    "services.webDev.title": "Web Development",
+    "services.webDev.description":
+      "Creating professional websites with the latest technology, responsive, and SEO-friendly for various types of businesses and needs.",
+    "services.appDev.title": "App Development",
+    "services.appDev.description": "Coming Soon",
+    "services.testing.title": "Web Automation Testing",
+    "services.testing.description":
+      "Fast and thorough in analyzing bugs to ensure product quality.",
+    "services.backend.title": "Backend Development",
+    "services.backend.description":
+      "Development of reliable, secure, and scalable backend systems to support web applications.",
+    "services.ecommerce.title": "E-commerce Solutions",
+    "services.ecommerce.description":
+      "Creating complete online stores with payment systems, product management, and integration with other systems.",
+    "services.seo.title": "SEO Optimization",
+    "services.seo.description":
+      "Website optimization for search engines to improve ranking and website visibility.",
+
+    // Contact Section
+    "contact.subtitle": "Contact",
+    "contact.title": "Contact Me",
+    "contact.location.title": "Location",
+    "contact.location.value": "Tangerang, Indonesia",
+    "contact.email.title": "Email",
+    "contact.phone.title": "Phone",
+    "contact.followMe": "Follow Me",
+    "contact.form.namePlaceholder": "Your Name",
+    "contact.form.emailPlaceholder": "Your Email",
+    "contact.form.subjectPlaceholder": "Subject",
+    "contact.form.messagePlaceholder": "Your Message",
+    "contact.form.sendButton": "Send Message",
+
+    // Portfolio Modal
+    "portfolio.project.description": "Project Description",
+    "portfolio.project.details": "Project Details",
+    "portfolio.project.client": "Client",
+    "portfolio.project.date": "Date",
+    "portfolio.project.technologies": "Technologies",
+    "portfolio.project.status": "Status",
+
+    // Skills Section
+    "skills.soft.title": "Soft Skills",
+    "skills.soft.teamwork": "Team Work",
+    "skills.soft.communication": "Communication",
+    "skills.soft.automation": "Automation Testing",
+
+    // Validation messages
+    "validation.nameRequired": "Name is required",
+    "validation.emailRequired": "Email is required",
+    "validation.emailInvalid": "Invalid email format",
+    "validation.subjectRequired": "Subject is required",
+    "validation.messageRequired": "Message is required",
+    "validation.success": "Message sent successfully!",
+    "validation.error": "An error occurred. Please try again.",
+  },
+};
+
+function initLanguageToggle() {
+  const langOptions = document.querySelectorAll(".lang-option");
+  const currentLang = localStorage.getItem("language") || "id";
+
+  // Set initial active language
+  setActiveLanguage(currentLang);
+  changeLanguage(currentLang);
+
+  langOptions.forEach((option) => {
+    option.addEventListener("click", function () {
+      const selectedLang = this.getAttribute("data-lang");
+      setActiveLanguage(selectedLang);
+      changeLanguage(selectedLang);
+      localStorage.setItem("language", selectedLang);
+    });
+  });
+}
+
+function setActiveLanguage(lang) {
+  const langOptions = document.querySelectorAll(".lang-option");
+  langOptions.forEach((option) => {
+    option.classList.remove("active");
+    if (option.getAttribute("data-lang") === lang) {
+      option.classList.add("active");
+    }
+  });
+}
+
+function changeLanguage(lang) {
+  const elements = document.querySelectorAll("[data-lang-key]");
+
+  elements.forEach((element) => {
+    const key = element.getAttribute("data-lang-key");
+    if (translations[lang] && translations[lang][key]) {
+      // Check if element has placeholder attribute
+      if (element.hasAttribute("placeholder")) {
+        element.placeholder = translations[lang][key];
+      } else {
+        element.innerHTML = translations[lang][key];
+      }
+    }
+  });
+
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
+
+  // Update page title
+  if (lang === "en") {
+    document.title = "Portfolio & CV Faqih";
+  } else {
+    document.title = "Portfolio & CV Faqih";
+  }
 }

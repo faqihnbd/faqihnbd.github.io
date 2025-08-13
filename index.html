@@ -26,24 +26,32 @@
         <nav class="navbar">
           <ul class="nav-menu">
             <li class="nav-item">
-              <a href="#home" class="nav-link active">Beranda</a>
+              <a href="#home" class="nav-link active" data-lang-key="nav.home">Beranda</a>
             </li>
             <li class="nav-item">
-              <a href="#about" class="nav-link">Tentang Saya</a>
+              <a href="#about" class="nav-link" data-lang-key="nav.about">Tentang Saya</a>
             </li>
             <li class="nav-item">
-              <a href="#resume" class="nav-link">Resume</a>
+              <a href="#resume" class="nav-link" data-lang-key="nav.resume">Resume</a>
             </li>
             <li class="nav-item">
-              <a href="#portfolio" class="nav-link">Portfolio</a>
+              <a href="#portfolio" class="nav-link" data-lang-key="nav.portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a href="#services" class="nav-link">Layanan</a>
+              <a href="#services" class="nav-link" data-lang-key="nav.services">Layanan</a>
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link">Kontak</a>
+              <a href="#contact" class="nav-link" data-lang-key="nav.contact">Kontak</a>
             </li>
           </ul>
+          <div class="language-toggle">
+            <div class="lang-option active" data-lang="id">
+              <img src="https://flagcdn.com/24x18/id.png" alt="Indonesia" width="24" height="18">
+            </div>
+            <div class="lang-option" data-lang="en">
+              <img src="https://flagcdn.com/24x18/gb.png" alt="English" width="24" height="18">
+            </div>
+          </div>
           <!--<div class="theme-toggle">
             <i class="fas fa-moon"></i>
           </div>-->
@@ -61,10 +69,10 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h5>Halo, Saya</h5>
+            <h5 data-lang-key="hero.greeting">Halo, Saya</h5>
             <h1>Faqih Nusabhakti Derajat</h1>
             <h2><span class="auto-type"></span></h2>
-            <p>
+            <p data-lang-key="hero.description">
               Saya meraih gelar Sarjana Sistem Komputer dari Universitas Serang
               Raya. Memiliki pengalaman lebih dari 1 tahun di bidang IT. Saya
               memiliki pemikiran logis dalam pendekatan praktis untuk memecahkan
@@ -73,9 +81,9 @@
               dan meningkatkan kinerja saya.
             </p>
             <div class="hero-buttons">
-              <a href="#portfolio" class="btn btn-primary">Lihat Portfolio</a>
+              <a href="#portfolio" class="btn btn-primary" data-lang-key="hero.viewPortfolio">Lihat Portfolio</a>
               <a href="https://wa.me/+6281224767065?text=Halo,%20saya%20ingin%20berdiskusi%20dengan%20Anda.
-" class="btn btn-outline">Hubungi Saya</a>
+" class="btn btn-outline" data-lang-key="hero.contactMe">Hubungi Saya</a>
             </div>
             <div class="social-links">
               <a
@@ -108,8 +116,8 @@
     <section id="about" class="about section">
       <div class="container">
         <div class="section-header">
-          <h3 class="subtitle">Tentang Saya</h3>
-          <h2 class="title">Mengenal Saya Lebih Dekat</h2>
+          <h3 class="subtitle" data-lang-key="about.subtitle">Tentang Saya</h3>
+          <h2 class="title" data-lang-key="about.title">Mengenal Saya Lebih Dekat</h2>
           <div class="title-bar"></div>
         </div>
         <div class="about-content">
@@ -117,18 +125,19 @@
             <img src="img/coding2.jpg" alt="About Me" />
             <div class="experience-badge">
               <span class="number">1+</span>
-              <span class="text">Tahun Pengalaman</span>
+              <span class="text" data-lang-key="about.experience">Tahun Pengalaman</span>
             </div>
           </div>
           <div class="about-text">
-            <h3>Saya adalah seorang Junior Quality Assurance</h3>
-            <p>
+            <h3 data-lang-key="about.jobTitle">Saya adalah seorang Junior Quality Assurance</h3>
+            <p data-lang-key="about.description">
               Saya Berminat besar di bidang Software Quality Assurance. Memiliki pemahaman dasar tentang pengujian manual dan
               otomatis, familiar dengan tools seperti Selenium, Postman, dan
               Git. Terbiasa mempelajari teknologi baru dengan cepat dan teliti
               dalam menganalisis bug untuk memastikan kualitas produk.
               <br /><br />
-              <p><b>Pengalaman Proyek / Portofolio:</b></p>
+              <p><b data-lang-key="about.project.experience">Pengalaman Proyek / Portofolio:</b></p>
+              <span data-lang-key="about.project.description">
               1. Automation Testing Sistem Point Of Sale Modern (Project Pribadi)
               Menggunakan Selenium + Python untuk membuat script test otomatis
               pada fitur login, CRUD Kategori, dll. Menjalankan test pada
@@ -136,31 +145,32 @@
               testing dalam format HTML.<br />
               2. API Testing untuk Aplikasi REST Menggunakan Postman untuk
               membuat collection API test.
+              </span>
             </p>
             <div class="personal-info">
               <div class="info-item">
-                <h4>Nama:</h4>
+                <h4 data-lang-key="about.name">Nama:</h4>
                 <p>Faqih Nusabhakti Derajat</p>
               </div>
               <div class="info-item">
-                <h4>Email:</h4>
+                <h4 data-lang-key="about.email">Email:</h4>
                 <p>faqihnusabhakti22@gmail.com</p>
               </div>
               <div class="info-item">
-                <h4>Telepon:</h4>
+                <h4 data-lang-key="about.phone">Telepon:</h4>
                 <p>+62 8122 4767 065</p>
               </div>
               <div class="info-item">
-                <h4>Usia:</h4>
-                <p>24 Tahun</p>
+                <h4 data-lang-key="about.age">Usia:</h4>
+                <p data-lang-key="about.ageValue">24 Tahun</p>
               </div>
               <div class="info-item">
-                <h4>Alamat:</h4>
+                <h4 data-lang-key="about.address">Alamat:</h4>
                 <p>Tangerang, Indonesia</p>
               </div>
               <div class="info-item">
-                <h4>Freelance:</h4>
-                <p>Tersedia</p>
+                <h4 data-lang-key="about.freelance">Freelance:</h4>
+                <p data-lang-key="about.freelanceStatus">Tersedia</p>
               </div>
             </div>
             <div class="about-buttons">
@@ -168,10 +178,11 @@
                 href="filefaqih/E-CV Faqih.pdf"
                 class="btn btn-primary"
                 download
+                data-lang-key="about.downloadCV"
                 >Download CV</a
               >
               <a href="https://wa.me/+6281224767065?text=Halo,%20saya%20ingin%20berdiskusi%20dengan%20Anda.
-" class="btn btn-outline">Hubungi Saya</a>
+" class="btn btn-outline" data-lang-key="about.contactMe">Hubungi Saya</a>
             </div>
           </div>
         </div>
@@ -182,17 +193,17 @@
     <section id="resume" class="resume section">
       <div class="container">
         <div class="section-header">
-          <h3 class="subtitle">Resume</h3>
-          <h2 class="title">Curriculum Vitae</h2>
+          <h3 class="subtitle" data-lang-key="resume.subtitle">Resume</h3>
+          <h2 class="title" data-lang-key="resume.title">Curriculum Vitae</h2>
           <div class="title-bar"></div>
         </div>
         <div class="resume-content">
           <div class="resume-tabs">
-            <button class="tab-btn active" data-target="education">
+            <button class="tab-btn active" data-target="education" data-lang-key="resume.education">
               Pendidikan
             </button>
-            <button class="tab-btn" data-target="experience">Pengalaman</button>
-            <button class="tab-btn" data-target="skills">Keahlian</button>
+            <button class="tab-btn" data-target="experience" data-lang-key="resume.experience">Pengalaman</button>
+            <button class="tab-btn" data-target="skills" data-lang-key="resume.skills">Keahlian</button>
           </div>
           <div class="resume-tab-content">
             <!-- Education Tab -->
@@ -233,13 +244,13 @@
               <div class="timeline">
                 <div class="timeline-item">
                   <div class="timeline-dot"></div>
-                  <div class="timeline-date">
+                  <div class="timeline-date" data-lang-key="exp.job1.date">
                     Jul 2024 - Sekarang, <br />Jakarta, Indonesia.
                   </div>
                   <div class="timeline-content">
-                    <h3>Staff Support & Deployment Software</h3>
-                    <h4>PT Murni Solusindo Nusantara</h4>
-                    <p>
+                    <h3 data-lang-key="exp.job1.title">Staff Support & Deployment Software</h3>
+                    <h4 data-lang-key="exp.job1.company">PT Murni Solusindo Nusantara</h4>
+                    <p data-lang-key="exp.job1.description">
                       • Deployment Software: mengimplementasikan perangkat lunak
                       atau sistem ke dalam lingkungan produksi yang melalui
                       beberapa tahap untuk mengembangkan sistem dengan sukses.
@@ -280,13 +291,13 @@
                 </div>
                 <div class="timeline-item">
                   <div class="timeline-dot"></div>
-                  <div class="timeline-date">
+                  <div class="timeline-date" data-lang-key="exp.job2.date">
                     Des 2023 - Mar 2024, <br />Tangerang, Indonesia.
                   </div>
                   <div class="timeline-content">
-                    <h3>Led Technician Staff (IT Division)</h3>
-                    <h4>PT Adhi Kartika Jaya (JJ PROMOTION)</h4>
-                    <p>
+                    <h3 data-lang-key="exp.job2.title">Led Technician Staff (IT Division)</h3>
+                    <h4 data-lang-key="exp.job2.company">PT Adhi Kartika Jaya (JJ PROMOTION)</h4>
+                    <p data-lang-key="exp.job2.description">
                       • Mengganti dan merawat LED Videotron <br />• Merakit dan
                       merawat komputer, berbagai perangkat keras seperti (VGA,
                       RAM dan Motherboard), Menginstal Windows, CCTV <br />•
@@ -378,6 +389,7 @@
                       <div class="skill-bar">
                         <div class="skill-progress" data-progress="80"></div>
                       </div>
+                    </div>
                     <div class="skill-item">
                       <div class="skill-info">
                         <h4>React.js</h4>
@@ -436,25 +448,25 @@
                 </div>
 
                 <div class="skills-category">
-                  <h3>Soft Skills</h3>
+                  <h3 data-lang-key="skills.soft.title">Soft Skills</h3>
                   <div class="skills-grid">
                     <div class="soft-skill-item">
                       <div class="skill-icon">
                         <i class="fas fa-users"></i>
                       </div>
-                      <h4>Team Work</h4>
+                      <h4 data-lang-key="skills.soft.teamwork">Team Work</h4>
                     </div>
                     <div class="soft-skill-item">
                       <div class="skill-icon">
                         <i class="fas fa-comments"></i>
                       </div>
-                      <h4>Komunikasi</h4>
+                      <h4 data-lang-key="skills.soft.communication">Komunikasi</h4>
                     </div>
                     <div class="soft-skill-item">
                       <div class="skill-icon">
                         <i class="fas fa-tasks"></i>
                       </div>
-                      <h4>Automation Testing</h4>
+                      <h4 data-lang-key="skills.soft.automation">Automation Testing</h4>
                     </div>
                     <div class="soft-skill-item">
                       <div class="skill-icon">
@@ -481,14 +493,14 @@
     <section id="portfolio" class="portfolio section">
       <div class="container">
         <div class="section-header">
-          <h3 class="subtitle">Portfolio</h3>
-          <h2 class="title">Karya Terbaik Saya</h2>
+          <h3 class="subtitle" data-lang-key="portfolio.subtitle">Portfolio</h3>
+          <h2 class="title" data-lang-key="portfolio.title">Karya Terbaik Saya</h2>
           <div class="title-bar"></div>
         </div>
         <div class="portfolio-filter">
-          <button class="filter-btn active" data-filter="all">Semua</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="app">App</button>
+          <button class="filter-btn active" data-filter="all" data-lang-key="portfolio.all">Semua</button>
+          <button class="filter-btn" data-filter="web" data-lang-key="portfolio.web">Web</button>
+          <button class="filter-btn" data-filter="app" data-lang-key="portfolio.app">App</button>
         </div>
         <div class="portfolio-grid">
           <div class="portfolio-item" data-category="web" data-has-video="true">
@@ -628,8 +640,8 @@
     <section id="services" class="services section">
       <div class="container">
         <div class="section-header">
-          <h3 class="subtitle">Layanan</h3>
-          <h2 class="title">Apa Yang Saya Tawarkan</h2>
+          <h3 class="subtitle" data-lang-key="services.subtitle">Layanan</h3>
+          <h2 class="title" data-lang-key="services.title">Apa Yang Saya Tawarkan</h2>
           <div class="title-bar"></div>
         </div>
         <div class="services-grid">
@@ -637,8 +649,8 @@
             <div class="service-icon">
               <i class="fas fa-code"></i>
             </div>
-            <h3>Web Development</h3>
-            <p>
+            <h3 data-lang-key="services.webDev.title">Web Development</h3>
+            <p data-lang-key="services.webDev.description">
               Pembuatan website profesional dengan teknologi terkini, responsif,
               dan SEO-friendly untuk berbagai jenis bisnis dan kebutuhan.
             </p>
@@ -647,15 +659,15 @@
             <div class="service-icon">
               <i class="fas fa-mobile-alt"></i>
             </div>
-            <h3>App Development</h3>
-            <p>Coming Soon</p>
+            <h3 data-lang-key="services.appDev.title">App Development</h3>
+            <p data-lang-key="services.appDev.description">Coming Soon</p>
           </div>
           <div class="service-item">
             <div class="service-icon">
               <i class="fas fa-tasks"></i>
             </div>
-            <h3>Web Automation Testing</h3>
-            <p>
+            <h3 data-lang-key="services.testing.title">Web Automation Testing</h3>
+            <p data-lang-key="services.testing.description">
               Cepat dan teliti dalam menganalisis bug untuk memastikan kualitas produk.
             </p>
           </div>
@@ -663,8 +675,8 @@
             <div class="service-icon">
               <i class="fas fa-server"></i>
             </div>
-            <h3>Backend Development</h3>
-            <p>
+            <h3 data-lang-key="services.backend.title">Backend Development</h3>
+            <p data-lang-key="services.backend.description">
               Pengembangan sistem backend yang andal, aman, dan scalable untuk
               mendukung aplikasi web.
             </p>
@@ -673,8 +685,8 @@
             <div class="service-icon">
               <i class="fas fa-shopping-cart"></i>
             </div>
-            <h3>E-commerce Solutions</h3>
-            <p>
+            <h3 data-lang-key="services.ecommerce.title">E-commerce Solutions</h3>
+            <p data-lang-key="services.ecommerce.description">
               Pembuatan toko online lengkap dengan sistem pembayaran, manajemen
               produk, dan integrasi dengan sistem lainnya.
             </p>
@@ -683,8 +695,8 @@
             <div class="service-icon">
               <i class="fas fa-search"></i>
             </div>
-            <h3>SEO Optimization</h3>
-            <p>
+            <h3 data-lang-key="services.seo.title">SEO Optimization</h3>
+            <p data-lang-key="services.seo.description">
               Optimasi website untuk mesin pencari untuk meningkatkan peringkat
               dan visibilitas website.
             </p>
@@ -773,8 +785,8 @@
     <section id="contact" class="contact section">
       <div class="container">
         <div class="section-header">
-          <h3 class="subtitle">Kontak</h3>
-          <h2 class="title">Hubungi Saya</h2>
+          <h3 class="subtitle" data-lang-key="contact.subtitle">Kontak</h3>
+          <h2 class="title" data-lang-key="contact.title">Hubungi Saya</h2>
           <div class="title-bar"></div>
         </div>
         <div class="contact-content">
@@ -784,8 +796,8 @@
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <div class="contact-text">
-                <h3>Lokasi</h3>
-                <p>Tangerang, Indonesia</p>
+                <h3 data-lang-key="contact.location.title">Lokasi</h3>
+                <p data-lang-key="contact.location.value">Tangerang, Indonesia</p>
               </div>
             </div>
             <div class="contact-item">
@@ -793,7 +805,7 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <div class="contact-text">
-                <h3>Email</h3>
+                <h3 data-lang-key="contact.email.title">Email</h3>
                 <p>faqihnusabhakti22@gmail.com</p>
               </div>
             </div>
@@ -802,12 +814,12 @@
                 <i class="fas fa-phone"></i>
               </div>
               <div class="contact-text">
-                <h3>Telepon</h3>
+                <h3 data-lang-key="contact.phone.title">Telepon</h3>
                 <p>+62 8122 47670 65</p>
               </div>
             </div>
             <div class="contact-social">
-              <h3>Ikuti Saya</h3>
+              <h3 data-lang-key="contact.followMe">Ikuti Saya</h3>
               <div class="social-links">
                 <a
                   href="https://www.linkedin.com/in/faqih-nusabhakti-derajat-8512601a6/"
@@ -828,29 +840,31 @@
           <div class="contact-form">
             <form id="contactForm" action="mailto:faqihnusabhakti22@gmail.com" method="post" enctype="text/plain">
               <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Nama Anda" required />
+                <input type="text" id="name" name="name" data-lang-key="contact.form.namePlaceholder" placeholder="Nama Anda" required />
               </div>
               <div class="form-group">
                 <input
                   type="email"
                   id="email"
                   name="email"
+                  data-lang-key="contact.form.emailPlaceholder"
                   placeholder="Email Anda"
                   required
                 />
               </div>
               <div class="form-group">
-                <input type="text" id="subject" name="subject" placeholder="Subjek" required />
+                <input type="text" id="subject" name="subject" data-lang-key="contact.form.subjectPlaceholder" placeholder="Subjek" required />
               </div>
               <div class="form-group">
                 <textarea
                   id="message"
                   name="message"
+                  data-lang-key="contact.form.messagePlaceholder"
                   placeholder="Pesan Anda"
                   required
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+              <button type="submit" class="btn btn-primary" data-lang-key="contact.form.sendButton">Kirim Pesan</button>
             </form>
           </div>
         </div>
