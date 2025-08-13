@@ -1041,7 +1041,6 @@ img {
   flex-wrap: wrap;
 }
 
-/* Video Player Styles */
 .modal-video {
   width: 100%;
   max-width: 100%;
@@ -1050,7 +1049,6 @@ img {
   margin-bottom: 20px;
 }
 
-/* YouTube Iframe Container */
 .modal-video-container {
   position: relative;
   width: 100%;
@@ -1070,7 +1068,6 @@ img {
   border-radius: var(--border-radius-md);
 }
 
-/* Image Gallery Styles */
 .modal-gallery {
   margin-bottom: 20px;
 }
@@ -1113,7 +1110,6 @@ img {
   border-color: var(--primary-color);
 }
 
-/* Portfolio Item Enhancement */
 .portfolio-item .portfolio-video-icon {
   position: absolute;
   top: 50%;
@@ -1142,7 +1138,6 @@ img {
   animation: pulse 2s infinite;
 }
 
-/* Pulse animation for video icon */
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1.1);
@@ -1186,7 +1181,6 @@ img {
   transform: scale(1.05);
 }
 
-/* Video preview placeholder animation */
 .portfolio-item[data-has-video="true"] .portfolio-img::after {
   content: "";
   position: absolute;
@@ -1211,7 +1205,6 @@ img {
   animation: shimmer 2s infinite;
 }
 
-/* Shimmer effect for video preview */
 @keyframes shimmer {
   0% {
     background-position: 200% 200%;
@@ -1221,7 +1214,6 @@ img {
   }
 }
 
-/* Video loading indicator */
 .portfolio-item .video-loading {
   position: absolute;
   top: 50%;
@@ -1247,7 +1239,6 @@ img {
   margin-right: 8px;
 }
 
-/* Enhanced hover effects for better visual feedback */
 .portfolio-item .portfolio-video-icon i {
   transition: transform 0.3s ease;
 }
@@ -1266,18 +1257,15 @@ img {
   }
 }
 
-/* Smooth video transition */
 .portfolio-item .portfolio-img video {
   transition: opacity 0.5s ease;
 }
 
-/* YouTube iframe for portfolio preview */
 .portfolio-item .portfolio-img iframe {
   transition: opacity 0.5s ease;
   border-radius: var(--border-radius-md);
 }
 
-/* Responsive Modal */
 @media (max-width: 768px) {
   .modal-container {
     width: 95%;
@@ -1691,6 +1679,11 @@ img {
     --section-padding: 70px;
   }
 
+  /* About section text center pada tampilan mobile */
+  .about-text {
+    text-align: center;
+  }
+
   .hamburger {
     display: block;
   }
@@ -1805,7 +1798,6 @@ img {
   }
 }
 
-/* Animation for tab switching */
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -225,7 +225,6 @@ body {
   animation: pulse 4s infinite;
 }
 
-/* About Section Animations */
 .about-image img {
   transition: transform 0.5s ease;
 }
@@ -238,7 +237,6 @@ body {
   animation: pulse 2s infinite;
 }
 
-/* Resume Section Animations */
 .timeline-dot {
   animation: pulse 2s infinite;
 }
