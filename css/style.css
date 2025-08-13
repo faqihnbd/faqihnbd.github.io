@@ -444,7 +444,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1/1; /* Membuat container persegi */
+  aspect-ratio: 3/4; /* ukuran container gambar */
   max-width: 400px; /* Ukuran maksimum */
   margin: 0 auto;
 }
@@ -1809,11 +1809,11 @@ img {
   }
 }
 
-/* Atur rasio khusus untuk Foto Faqih.jpg */
+/* Atur rasio khusus untuk Foto Faqih.jpg 
 .foto-faqih-3-4 {
   aspect-ratio: 3 / 4;
   width: 100%;
   max-width: 400px;
   object-fit: cover;
   display: block;
-}
+}*/
