@@ -327,27 +327,24 @@ function initPortfolioModal() {
       codeUrl: "#",
     },
     portfolio4: {
-      title: "Automation Testing Cypress",
+      title: "Automation Testing Playwright",
       category: "Web Testing",
       description: {
-        id: "Coming Soon",
-        en: "Coming Soon",
+        id: "Automation Testing UI dengan Playwright",
+        en: "Automation Testing UI with Playwright",
       },
       details: {
         client: "Internal Project",
-        date: "Coming soon",
-        technologies: "Javascript - Coming Soon",
+        date: "Juli 2025",
+        technologies: "Javascript, Playwright",
         status: {
-          id: "Akan Datang",
-          en: "Coming Soon",
+          id: "Masih Dalam Pengembangan",
+          en: "Under Development",
         },
       },
-      type: "images",
-      images: [
-        "img/portfolio3.jpg",
-        "img/portfolio/brand-logo.jpg",
-        "img/portfolio/brand-guide.jpg",
-      ],
+      type: "mixed",
+      video: "https://www.youtube.com/embed/y2W_qr9pMdg?autoplay=1&mute=1",
+      images: ["img/portfolio/playwright.png"],
       liveUrl: "#",
       codeUrl: "#",
     },
@@ -732,8 +729,9 @@ function initPortfolioVideoPreview() {
         poster: "img/portfolio/seleniumrts.png",
       },
       portfolio4: {
-        video: "",
-        poster: "img/comingsoon.png",
+        video:
+          "https://www.youtube.com/embed/y2W_qr9pMdg?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=y2W_qr9pMdg",
+        poster: "img/portfolio/playwright.png",
       },
       portfolio5: {
         video:
