@@ -258,13 +258,13 @@ function initPortfolioModal() {
         en: "Reliable CRM and ERP-based POS application that helps reporting and real-time inventory management.",
       },
       details: {
-        client: "Internal Project",
-        date: "Mei 2025",
+        client: ": Internal Project",
+        date: ": Mei 2025",
         technologies:
-          "HTML, CSS-Tailwind, JavaScript-React(Frontend), Javascript-Node.JS Express(Backend), Mysql2 Sequalize ORM, Cloud SaaS",
+          ": HTML, CSS-Tailwind, JavaScript-React(Frontend), Javascript-Node.JS Express(Backend), Mysql2 Sequalize ORM, Cloud SaaS",
         status: {
-          id: "Sedang Dalam Pengembangan 85% Progress",
-          en: "Under Development 85% Progress",
+          id: ": Sedang Dalam Pengembangan 85% Progress",
+          en: ": Under Development 85% Progress",
         },
       },
       type: "mixed", // video, images, mixed
@@ -285,13 +285,13 @@ function initPortfolioModal() {
         en: "Attractive and User-Friendly corporate website that is responsive according to client requests. So it can meet client expectations well.",
       },
       details: {
-        client: "Putra Mandiri Tractor",
-        date: "Juni 2025",
+        client: ": Putra Mandiri Tractor",
+        date: ": Juni 2025",
         technologies:
-          "Javascript, React, Express.js (untuk admin mengelola product)",
+          ": Javascript, React, Express.js (untuk admin mengelola product)",
         status: {
-          id: "Selesai",
-          en: "Completed",
+          id: ": Selesai",
+          en: ": Completed",
         },
       },
       type: "mixed",
@@ -313,11 +313,11 @@ function initPortfolioModal() {
       },
       details: {
         client: "Internal Project",
-        date: "Juli 2025",
-        technologies: "Selenium, Chrome WebDriver, Python",
+        date: ":Juli 2025",
+        technologies: ": Selenium, Chrome WebDriver, Python",
         status: {
-          id: "Sedang Dalam Pengembangan",
-          en: "Under Development",
+          id: ": Sedang Dalam Pengembangan",
+          en: ": Under Development",
         },
       },
       type: "mixed", // video, images, mixed
@@ -334,12 +334,12 @@ function initPortfolioModal() {
         en: "Automation Testing UI with Playwright",
       },
       details: {
-        client: "Internal Project",
-        date: "Juli 2025",
-        technologies: "Javascript, Playwright",
+        client: ": Internal Project",
+        date: ": Juli 2025",
+        technologies: ": Javascript, Playwright",
         status: {
-          id: "Masih Dalam Pengembangan",
-          en: "Under Development",
+          id: ": Masih Dalam Pengembangan",
+          en: ": Under Development",
         },
       },
       type: "mixed",
@@ -356,13 +356,13 @@ function initPortfolioModal() {
         en: "Interactive and responsive Digital Signage application for displaying real-time information.",
       },
       details: {
-        client: "Internal Project",
-        date: "Agustus 2025",
+        client: ": Internal Project",
+        date: ": Agustus 2025",
         technologies:
-          "React Vite, Tailwind CSS, Javascript, Node.js Express, Mysql2 Sequalize ORM",
+          ": React Vite, Tailwind CSS, Javascript, Node.js Express, Mysql2 Sequalize ORM",
         status: {
-          id: "Sedang Dalam Pengembangan 80% Progress",
-          en: "Under Development 80% Progress",
+          id: ": Sedang Dalam Pengembangan 80% Progress",
+          en: ": Under Development 80% Progress",
         },
       },
       type: "mixed", // video, images, mixed
@@ -855,10 +855,10 @@ const translations = {
     // About Section
     "about.subtitle": "Tentang Saya",
     "about.title": "Mengenal Saya Lebih Dekat",
-    "about.experience": "Tahun Pengalaman",
-    "about.jobTitle": "Saya adalah seorang Junior Quality Assurance",
+    "about.experience": "Tahun Pengalaman di Bidang IT",
+    "about.jobTitle": "Junior Quality Assurance",
     "about.description":
-      "Saya Berminat besar di bidang Software Quality Assurance. Memiliki pemahaman dasar tentang pengujian manual dan otomatis, familiar dengan tools seperti Selenium, Postman, dan Git. Terbiasa mempelajari teknologi baru dengan cepat dan teliti dalam menganalisis bug untuk memastikan kualitas produk.<br /><br /><p><b>Pengalaman Proyek / Portofolio:</b></p>1. Automation Testing Sistem Point Of Sale Modern (Project Pribadi) Menggunakan Selenium + Python untuk membuat script test otomatis pada fitur login, CRUD Kategori, dll. Menjalankan test pada Chrome browser menggunakan WebDriver. Membuat laporan hasil testing dalam format HTML.<br />2. API Testing untuk Aplikasi REST Menggunakan Postman untuk membuat collection API test.",
+      "Saya Berminat besar di bidang Software Quality Assurance. Memiliki pemahaman dasar tentang pengujian manual dan otomatis, familiar dengan tools seperti Playwright, K6, Selenium, Postman, dan Git. Terbiasa mempelajari teknologi baru dengan cepat dan teliti dalam menganalisis bug untuk memastikan kualitas produk.<br /><br /><p><b>Pengalaman Proyek / Portofolio:</b></p>1. Automation Testing Sistem Point Of Sale Modern (Project Pribadi) Menggunakan alat Playwright, K6, Selenium, Postman  untuk membuat script test otomatis pada fitur login, CRUD, Dan lain-lain. Menjalankan test pada browser Chromonium, WebDriver. Membuat laporan hasil testing dalam format HTML.<br />2. API Testing untuk Aplikasi REST Menggunakan Postman untuk menguji fungsionalitas API.<br/>3. Pengujian performa API menggunakan K6 untuk testing beban kerja API.",
     "about.name": "Nama:",
     "about.email": "Email:",
     "about.phone": "Telepon:",
@@ -869,9 +869,6 @@ const translations = {
     "about.freelanceStatus": "Tersedia",
 
     // About Project Experience
-    "about.project.experience": "Pengalaman Proyek / Portofolio:",
-    "about.project.description":
-      "1. Automation Testing Sistem Point Of Sale Modern (Project Pribadi) Menggunakan Selenium + Python untuk membuat script test otomatis pada fitur login, CRUD Kategori, dll. Menjalankan test pada Chrome browser menggunakan WebDriver. Membuat laporan hasil testing dalam format HTML.<br />2. API Testing untuk Aplikasi REST Menggunakan Postman untuk membuat collection API test.",
     "about.downloadCV": "Download CV",
     "about.contactMe": "Hubungi Saya",
 
@@ -899,8 +896,7 @@ const translations = {
     "exp.job2.title": "Led Technician Staff (IT Division)",
     "exp.job2.company": "PT Adhi Kartika Jaya (JJ PROMOTION)",
     "exp.job2.description":
-      "• Mengganti dan merawat LED Videotron <br />• Merakit dan merawat komputer, berbagai perangkat keras seperti (VGA, PSU, Mainboard, RAM, dll) <br />• Troubleshooting Komputer dan mengoptimalkan komputer agar tidak lemot <br />• Install aplikasi yang dibutuhkan dan membersihkan komputer dari virus <br />• Mereparasi dan merawat proyektor LCD/DLP serta audio",
-
+      "• Mengganti dan merawat LED Videotron <br />• Merakit dan merawat komputer, berbagai perangkat keras seperti (VGA, RAM dan Motherboard), Instalasi Windows, CCTV <br />• Mendiagnosis masalah perangkat keras dan perangkat lunak komputer <br />• Membuat laporan kegiatan harian <br />• Bekerja sama dalam tim",
     // Services Section
     "services.subtitle": "Layanan",
     "services.title": "Apa Yang Saya Tawarkan",
@@ -978,10 +974,10 @@ const translations = {
     // About Section
     "about.subtitle": "About Me",
     "about.title": "Getting to Know Me Better",
-    "about.experience": "Years Experience",
-    "about.jobTitle": "I am a Junior Quality Assurance",
+    "about.experience": "Years of Experience in the IT Field",
+    "about.jobTitle": "Junior Quality Assurance",
     "about.description":
-      "I am very interested in the Software Quality Assurance field. I have a basic understanding of manual and automated testing, familiar with tools such as Selenium, Postman, and Git. I am accustomed to learning new technologies quickly and am thorough in analyzing bugs to ensure product quality.<br /><br /><p><b>Project Experience / Portfolio:</b></p>1. Automation Testing Modern Point Of Sale System (Personal Project) Using Selenium + Python to create automatic test scripts on login features, CRUD Categories, etc. Running tests on Chrome browser using WebDriver. Creating testing result reports in HTML format.<br />2. API Testing for REST Applications Using Postman to create API test collections.",
+      "I am passionate about Software Quality Assurance. I have a basic understanding of manual and automated testing, and am familiar with tools like Playwright, K6, Selenium, Postman, and Git. I am accustomed to learning new technologies quickly and thoroughly analyzing bugs to ensure product quality.<br /><br /><p><b>Project Experience / Portfolio:</b></p>1. Automation Testing of Modern Point of Sale Systems (Personal Project) Using Playwright, K6, Selenium, and Postman to create automated test scripts for login, CRUD, and other features. Running tests on Chromonium and WebDriver browsers. Generating test result reports in HTML format.<br />2. API Testing for REST Applications Using Postman to test API functionality.<br/>3. API performance testing using K6 for API workload testing.",
     "about.name": "Name:",
     "about.email": "Email:",
     "about.phone": "Phone:",
@@ -992,9 +988,6 @@ const translations = {
     "about.freelanceStatus": "Available",
 
     // About Project Experience
-    "about.project.experience": "Project Experience / Portfolio:",
-    "about.project.description":
-      "1. Modern Point Of Sale System Automation Testing (Personal Project) Using Selenium + Python to create automated test scripts for login features, Category CRUD, etc. Running tests on Chrome browser using WebDriver. Creating testing result reports in HTML format.<br />2. REST Application API Testing Using Postman to create API test collections.",
     "about.downloadCV": "Download CV",
     "about.contactMe": "Contact Me",
 
@@ -1022,8 +1015,7 @@ const translations = {
     "exp.job2.title": "Led Technician Staff (IT Division)",
     "exp.job2.company": "PT Adhi Kartika Jaya (JJ PROMOTION)",
     "exp.job2.description":
-      "• Replacing and maintaining LED Videotron <br />• Assembling and maintaining computers, various hardware such as (VGA, PSU, Mainboard, RAM, etc.) <br />• Computer troubleshooting and optimizing computers to avoid slowdowns <br />• Installing required applications and cleaning computers from viruses <br />• Repairing and maintaining LCD/DLP projectors and audio equipment",
-
+      "• Replacing and maintaining LED videotrons <br />• Assembling and maintaining computers, various hardware such as (VGA, RAM and Motherboard), Windows installation, CCTV <br />•Diagnosing computer hardware and software problems <br />• Creating daily activity reports <br />•Working in a team",
     // Services Section
     "services.subtitle": "Services",
     "services.title": "What I Offer",
